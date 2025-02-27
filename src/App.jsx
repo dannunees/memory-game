@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Card from "./Card";
 import styled from "styled-components";
 
-
 const BoxContainer = styled.div`
   max-width: 1216px;
   margin: 0 auto;
@@ -74,16 +73,22 @@ const ModalButton = styled.div`
 const App = () => {
   const [linksCard, setLinksCard] = useState([]);
   const [showModal, setShowModal] = useState(false);
+  const [activeCards, setActiveCards] = useState({});
 
   const closeModal = () => {
+    // Resetar os links e os cards
     setShowModal(false);
     setLinksCard([]);
-    location.reload()
+    location.reload();
   };
 
   const handleAddLink = (src) => {
     if (linksCard.length < 2) {
       setLinksCard((prevLinks) => [...prevLinks, src]);
+      setActiveCards((prevState) => ({
+        ...prevState,
+        [src]: true, // Marca o card como ativo
+      }));
     } else {
       console.log("Limite máximo de 2 itens atingido.");
     }
@@ -100,9 +105,12 @@ const App = () => {
     if (linksCard.length === 2) {
       if (linksCard[0] !== linksCard[1]) {
         console.log("Itens diferentes");
-        setShowModal(true);
+        setShowModal(true); // Exibe o modal de erro
       } else {
         console.log("Itens iguais");
+        // Aqui, se os itens forem iguais, podemos continuar o jogo
+        setLinksCard([]);
+        setActiveCards({});
       }
     }
   }, [linksCard]);
@@ -119,26 +127,115 @@ const App = () => {
       )}
 
       <BoxContainer>
-        <Card src="/assets/icon-1.png" addLink={handleAddLink} toggleActive={toggleActive} />
-        <Card src="/assets/icon-2.png" addLink={handleAddLink} toggleActive={toggleActive} />
-        <Card src="/assets/icon-3.png" addLink={handleAddLink} toggleActive={toggleActive} />
-        <Card src="/assets/icon-4.png" addLink={handleAddLink} toggleActive={toggleActive} />
-        <Card src="/assets/icon-5.png" addLink={handleAddLink} toggleActive={toggleActive} />
-        <Card src="/assets/icon-6.png" addLink={handleAddLink} toggleActive={toggleActive} />
-        <Card src="/assets/icon-7.png" addLink={handleAddLink} toggleActive={toggleActive} />
-        <Card src="/assets/icon-8.png" addLink={handleAddLink} toggleActive={toggleActive} />
-        <Card src="/assets/icon-9.png" addLink={handleAddLink} toggleActive={toggleActive} />
-        <Card src="/assets/icon-1.png" addLink={handleAddLink} toggleActive={toggleActive} />
-        <Card src="/assets/icon-2.png" addLink={handleAddLink} toggleActive={toggleActive} />
-        <Card src="/assets/icon-3.png" addLink={handleAddLink} toggleActive={toggleActive} />
-        <Card src="/assets/icon-4.png" addLink={handleAddLink} toggleActive={toggleActive} />
-        <Card src="/assets/icon-5.png" addLink={handleAddLink} toggleActive={toggleActive} />
-        <Card src="/assets/icon-6.png" addLink={handleAddLink} toggleActive={toggleActive} />
-        <Card src="/assets/icon-7.png" addLink={handleAddLink} toggleActive={toggleActive} />
-        <Card src="/assets/icon-8.png" addLink={handleAddLink} toggleActive={toggleActive} />
-        <Card src="/assets/icon-9.png" addLink={handleAddLink} toggleActive={toggleActive} />
+        <Card
+          src="/assets/icon-1.png"
+          addLink={handleAddLink}
+          toggleActive={toggleActive}
+          active={activeCards["/assets/icon-1.png"]}
+        />
+        <Card
+          src="/assets/icon-2.png"
+          addLink={handleAddLink}
+          toggleActive={toggleActive}
+          active={activeCards["/assets/icon-2.png"]}
+        />
+        <Card
+          src="/assets/icon-3.png"
+          addLink={handleAddLink}
+          toggleActive={toggleActive}
+          active={activeCards["/assets/icon-3.png"]}
+        />
+        <Card
+          src="/assets/icon-4.png"
+          addLink={handleAddLink}
+          toggleActive={toggleActive}
+          active={activeCards["/assets/icon-4.png"]}
+        />
+        <Card
+          src="/assets/icon-5.png"
+          addLink={handleAddLink}
+          toggleActive={toggleActive}
+          active={activeCards["/assets/icon-5.png"]}
+        />
+        <Card
+          src="/assets/icon-6.png"
+          addLink={handleAddLink}
+          toggleActive={toggleActive}
+          active={activeCards["/assets/icon-6.png"]}
+        />
+        <Card
+          src="/assets/icon-7.png"
+          addLink={handleAddLink}
+          toggleActive={toggleActive}
+          active={activeCards["/assets/icon-7.png"]}
+        />
+        <Card
+          src="/assets/icon-8.png"
+          addLink={handleAddLink}
+          toggleActive={toggleActive}
+          active={activeCards["/assets/icon-8.png"]}
+        />
+        <Card
+          src="/assets/icon-9.png"
+          addLink={handleAddLink}
+          toggleActive={toggleActive}
+          active={activeCards["/assets/icon-9.png"]}
+        />
+        <Card
+          src="/assets/icon-1.png"
+          addLink={handleAddLink}
+          toggleActive={toggleActive}
+          active={activeCards["/assets/icon-1.png"]}
+        />
+        <Card
+          src="/assets/icon-2.png"
+          addLink={handleAddLink}
+          toggleActive={toggleActive}
+          active={activeCards["/assets/icon-2.png"]}
+        />
+        <Card
+          src="/assets/icon-3.png"
+          addLink={handleAddLink}
+          toggleActive={toggleActive}
+          active={activeCards["/assets/icon-3.png"]}
+        />
+        <Card
+          src="/assets/icon-4.png"
+          addLink={handleAddLink}
+          toggleActive={toggleActive}
+          active={activeCards["/assets/icon-4.png"]}
+        />
+        <Card
+          src="/assets/icon-5.png"
+          addLink={handleAddLink}
+          toggleActive={toggleActive}
+          active={activeCards["/assets/icon-5.png"]}
+        />
+        <Card
+          src="/assets/icon-6.png"
+          addLink={handleAddLink}
+          toggleActive={toggleActive}
+          active={activeCards["/assets/icon-6.png"]}
+        />
+        <Card
+          src="/assets/icon-7.png"
+          addLink={handleAddLink}
+          toggleActive={toggleActive}
+          active={activeCards["/assets/icon-7.png"]}
+        />
+        <Card
+          src="/assets/icon-8.png"
+          addLink={handleAddLink}
+          toggleActive={toggleActive}
+          active={activeCards["/assets/icon-8.png"]}
+        />
+        <Card
+          src="/assets/icon-9.png"
+          addLink={handleAddLink}
+          toggleActive={toggleActive}
+          active={activeCards["/assets/icon-9.png"]}
+        />
       </BoxContainer>
-
     </>
   );
 };
