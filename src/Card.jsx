@@ -28,7 +28,7 @@ const Box = styled.div `
         left: 0;
         width: 100%;
         position: absolute;
-        background-image: url('src/assets/images/buh.png');
+        background-image: url('public/assets/buh.png');
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
