@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Card from "./Card";
 import styled from "styled-components";
 
+
 const BoxContainer = styled.div`
   max-width: 1216px;
   margin: 0 auto;
@@ -77,7 +78,6 @@ const App = () => {
   const closeModal = () => {
     setShowModal(false);
     setLinksCard([]);
-    setActive(false);
   };
 
   const handleAddLink = (src) => {
@@ -137,6 +137,7 @@ const App = () => {
         <Card src="src/assets/images/icon-8.png" addLink={handleAddLink} toggleActive={toggleActive} />
         <Card src="src/assets/images/icon-9.png" addLink={handleAddLink} toggleActive={toggleActive} />
       </BoxContainer>
+
     </>
   );
 };
