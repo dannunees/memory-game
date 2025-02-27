@@ -118,24 +118,24 @@ const App = () => {
       )}
 
       <BoxContainer>
-        <Card src="public/assets/icon-1.png" addLink={handleAddLink} toggleActive={toggleActive} />
-        <Card src="public/assets/icon-2.png" addLink={handleAddLink} toggleActive={toggleActive} />
-        <Card src="public/assets/icon-3.png" addLink={handleAddLink} toggleActive={toggleActive} />
-        <Card src="public/assets/icon-4.png" addLink={handleAddLink} toggleActive={toggleActive} />
-        <Card src="public/assets/icon-5.png" addLink={handleAddLink} toggleActive={toggleActive} />
-        <Card src="public/assets/icon-6.png" addLink={handleAddLink} toggleActive={toggleActive} />
-        <Card src="public/assets/icon-7.png" addLink={handleAddLink} toggleActive={toggleActive} />
-        <Card src="public/assets/icon-8.png" addLink={handleAddLink} toggleActive={toggleActive} />
-        <Card src="public/assets/icon-9.png" addLink={handleAddLink} toggleActive={toggleActive} />
-        <Card src="public/assets/icon-1.png" addLink={handleAddLink} toggleActive={toggleActive} />
-        <Card src="public/assets/icon-2.png" addLink={handleAddLink} toggleActive={toggleActive} />
-        <Card src="public/assets/icon-3.png" addLink={handleAddLink} toggleActive={toggleActive} />
-        <Card src="public/assets/icon-4.png" addLink={handleAddLink} toggleActive={toggleActive} />
-        <Card src="public/assets/icon-5.png" addLink={handleAddLink} toggleActive={toggleActive} />
-        <Card src="public/assets/icon-6.png" addLink={handleAddLink} toggleActive={toggleActive} />
-        <Card src="public/assets/icon-7.png" addLink={handleAddLink} toggleActive={toggleActive} />
-        <Card src="public/assets/icon-8.png" addLink={handleAddLink} toggleActive={toggleActive} />
-        <Card src="public/assets/icon-9.png" addLink={handleAddLink} toggleActive={toggleActive} />
+        <Card src="/assets/icon-1.png" addLink={handleAddLink} toggleActive={toggleActive} />
+        <Card src="/assets/icon-2.png" addLink={handleAddLink} toggleActive={toggleActive} />
+        <Card src="/assets/icon-3.png" addLink={handleAddLink} toggleActive={toggleActive} />
+        <Card src="/assets/icon-4.png" addLink={handleAddLink} toggleActive={toggleActive} />
+        <Card src="/assets/icon-5.png" addLink={handleAddLink} toggleActive={toggleActive} />
+        <Card src="/assets/icon-6.png" addLink={handleAddLink} toggleActive={toggleActive} />
+        <Card src="/assets/icon-7.png" addLink={handleAddLink} toggleActive={toggleActive} />
+        <Card src="/assets/icon-8.png" addLink={handleAddLink} toggleActive={toggleActive} />
+        <Card src="/assets/icon-9.png" addLink={handleAddLink} toggleActive={toggleActive} />
+        <Card src="/assets/icon-1.png" addLink={handleAddLink} toggleActive={toggleActive} />
+        <Card src="/assets/icon-2.png" addLink={handleAddLink} toggleActive={toggleActive} />
+        <Card src="/assets/icon-3.png" addLink={handleAddLink} toggleActive={toggleActive} />
+        <Card src="/assets/icon-4.png" addLink={handleAddLink} toggleActive={toggleActive} />
+        <Card src="/assets/icon-5.png" addLink={handleAddLink} toggleActive={toggleActive} />
+        <Card src="/assets/icon-6.png" addLink={handleAddLink} toggleActive={toggleActive} />
+        <Card src="/assets/icon-7.png" addLink={handleAddLink} toggleActive={toggleActive} />
+        <Card src="/assets/icon-8.png" addLink={handleAddLink} toggleActive={toggleActive} />
+        <Card src="/assets/icon-9.png" addLink={handleAddLink} toggleActive={toggleActive} />
       </BoxContainer>
 
     </>
