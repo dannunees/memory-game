@@ -78,6 +78,7 @@ const App = () => {
   const closeModal = () => {
     setShowModal(false);
     setLinksCard([]);
+    location.reload()
   };
 
   const handleAddLink = (src) => {
